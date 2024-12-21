@@ -1,14 +1,8 @@
 // src/components/Balance.js
 import React from 'react';
+import { getEmoji } from '../utils/emoji';
 
 export function Balance({ balance }) {
-  const getEmoji = (amount) => {
-    if (amount >= 50) return "🌟";
-    if (amount >= 20) return "⭐";
-    if (amount >= 10) return "✨";
-    return "💫";
-  };
-
   return (
     <div className="balance-container">
       <h2 className="balance-title">My Money Box</h2>
