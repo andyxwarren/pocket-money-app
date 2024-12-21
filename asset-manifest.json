@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pocket-money-app/static/css/main.7f3dfd76.css",
+    "main.js": "/pocket-money-app/static/js/main.7e27389b.js",
+    "index.html": "/pocket-money-app/index.html",
+    "main.7f3dfd76.css.map": "/pocket-money-app/static/css/main.7f3dfd76.css.map",
+    "main.7e27389b.js.map": "/pocket-money-app/static/js/main.7e27389b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f3dfd76.css",
+    "static/js/main.7e27389b.js"
+  ]
+}
