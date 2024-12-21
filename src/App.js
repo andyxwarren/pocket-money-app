@@ -1,5 +1,6 @@
 // src/App.js
 import React from 'react';
+import { SavingsChart } from './components/SavingsChart';
 import { useState, useEffect } from 'react';
 import './styles/App.css';
 
@@ -87,6 +88,7 @@ function App() {
               {getEmoji(balance)} My Savings
             </div>
           </div>
+          <SavingsChart transactions={transactions} />
 
           <form onSubmit={handleSubmit} className="form">
             <div className="button-group">
