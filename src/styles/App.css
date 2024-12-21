@@ -1,0 +1,271 @@
+/* src/styles/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: linear-gradient(180deg, #f3e8ff 0%, #e0f2fe 100%);
+  min-height: 100vh;
+}
+
+.app {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #e9d5ff;
+}
+
+.title {
+  color: #7c3aed;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.piggy, .star {
+  font-size: 28px;
+}
+
+.balance-container {
+  background: linear-gradient(to right, #f3e8ff, #dbeafe);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.balance {
+  font-size: 36px;
+  color: #7c3aed;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.balance-label {
+  color: #6b7280;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f3f4f6;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button.save.active {
+  background-color: #4ade80;
+  color: white;
+}
+
+.button.spend.active {
+  background-color: #f472b6;
+  color: white;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9d5ff;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #7c3aed;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submit-button:hover {
+  transform: scale(1.02);
+  background: #6d28d9;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transaction {
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.transaction:hover {
+  transform: scale(1.02);
+}
+
+.transaction.income {
+  background-color: #dcfce7;
+  border: 2px solid #86efac;
+}
+
+.transaction.expense {
+  background-color: #fce7f3;
+  border: 2px solid #fca5a5;
+}
+
+.transaction-info {
+  flex: 1;
+}
+
+.transaction-description {
+  font-weight: bold;
+  color: #374151;
+}
+
+.transaction-date {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.transaction-amount-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-amount {
+  font-weight: bold;
+}
+
+.income .transaction-amount {
+  color: #22c55e;
+}
+
+.expense .transaction-amount {
+  color: #ec4899;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.no-transactions {
+  text-align: center;
+  color: #6b7280;
+  padding: 20px;
+}
+
+.celebration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.celebration-emoji {
+  font-size: 100px;
+  animation: celebrate 1s ease-out forwards;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .balance {
+    font-size: 28px;
+  }
+  
+  .button {
+    font-size: 14px;
+    padding: 15px;
+    min-height: 48px;
+  }
+  
+  .input {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+/* iOS safe area support */
+@supports (padding: max(0px)) {
+  .app {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+  }
+}
